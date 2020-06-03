@@ -8,6 +8,7 @@ import ModalRegister from './components/Register/Register';
 import Home from './pages/Home';
 import TVSection from './pages/TVSection';
 import MoviesSection from './pages/MoviesSection';
+import ScrollToTop from './components/utils/ScrollToTop';
 
 function App() {
 	const [ isLogin, setLogin ] = useState(false);
@@ -37,11 +38,14 @@ function App() {
 					showModalLogin={showModalLogin}
 					showModalRegister={showModalRegister}
 				/>
-				<Switch>
-					<Route exact path="/" component={Home} />
-					<Route exact path="/tv-series" component={TVSection} />
-					<Route exact path="/movies" component={MoviesSection} />
-				</Switch>
+				<ScrollToTop>
+					<Switch>
+						<Route exact path="/" component={Home} />
+						<Route exact path="/tv-series" component={TVSection} />
+						<Route exact path="/movies" component={MoviesSection} />
+					</Switch>
+				</ScrollToTop>
+
 				{modalLogin && (
 					<ModalLogin
 						showModalLogin={showModalLogin}
