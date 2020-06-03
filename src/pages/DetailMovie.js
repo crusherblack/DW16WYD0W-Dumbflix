@@ -1,22 +1,34 @@
-import React from "react";
-import { Movies } from "../fakedata/movie";
+import React from 'react';
+import { movieList } from '../fakedata/movie';
+import VideoThumbnail from '../components/VideoThumbnail/VideoThumbnail';
+import Description from '../components/MovieDetail/Description';
+import Episode from '../components/MovieDetail/Episode';
+import Movie from '../components/MovieDetail/Movie';
+import './pages.css';
+
+import moviesThumbnail from '../img/videothumbnail/video2.png';
+import tvThumbnail from '../img/videothumbnail/video1.png';
 
 const DetailMovie = ({ match }) => {
-  const movie = Movies.filter((detail) => {
-    return detail.id == match.params.id;
-  });
+	const movie = movieList.filter((detail) => {
+		return detail.id == match.params.id;
+	});
 
-  console.log(movie);
-
-  return (
-    <div style={{ marginTop: "70px" }}>
-      <p style={{ color: "white" }}>
-        {match.params.id}
-        {movie[0].name}
-        {movie[0].img}
-      </p>
-    </div>
-  );
+	return (
+		<div style={{ marginTop: '70px' }}>
+			<VideoThumbnail
+				thumbnail={movie[0].type == 'tv' ? tvThumbnail : moviesThumbnail}
+			/>
+			<div className="details">
+				<Description movie={movie[0]} />
+				{movie[0].type == 'tv' ? (
+					<Episode name={movie[0].name} />
+				) : (
+					<Movie name={movie[0].name} />
+				)}
+			</div>
+		</div>
+	);
 };
 
 export default DetailMovie;

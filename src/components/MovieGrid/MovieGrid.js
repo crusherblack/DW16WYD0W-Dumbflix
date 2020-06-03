@@ -2,18 +2,20 @@ import React from 'react';
 import MovieCard from '../MovieCard/MovieCard';
 import './MovieGrid.css';
 
-const MovieGrid = ({ movieList, title, filter }) => {
+const MovieGrid = ({ movieList, title, filter, type }) => {
 	const amount = filter - 1;
-	const list = movieList.map((movie) => <MovieCard movie={movie} key={movie.id} />);
-	const result = list.filter((movie, index) => index <= amount);
+
+	const moviesType = movieList.filter((movie) => movie.type == type);
+	const moviesTop = moviesType.filter((movie, index) => index <= amount);
+
+	const list = moviesTop.map((movie) => <MovieCard movie={movie} key={movie.id} />);
 
 	return (
 		<div className="movie-grid">
 			<div className="movie-type">
 				<label>{title}</label>
 			</div>
-
-			<div className="movie-list">{result}</div>
+			<div className="movie-list">{list}</div>
 		</div>
 	);
 };

@@ -26,18 +26,20 @@ import card22 from '../img/moviecard/card22.png';
 import card23 from '../img/moviecard/card23.png';
 import card24 from '../img/moviecard/card24.png';
 
-export const movieTVList = [
+export const movieList = [
 	{
 		id: 1,
 		name: 'The Witcher',
 		year: 2019,
-		img: card1
+		img: card1,
+		type: 'tv'
 	},
 	{
 		id: 2,
 		name: 'Persona 3 The Movie',
 		year: 2017,
-		img: card2
+		img: card2,
+		type: 'tv'
 	},
 	{
 		id: 3,
@@ -49,129 +51,147 @@ export const movieTVList = [
 		id: 4,
 		name: 'Money Heist',
 		year: 2012,
-		img: card4
+		img: card4,
+		type: 'tv'
 	},
 	{
 		id: 5,
 		name: 'Touch',
 		year: 2013,
-		img: card5
+		img: card5,
+		type: 'tv'
 	},
 	{
 		id: 6,
 		name: 'Arrow',
 		year: 2018,
-		img: card6
+		img: card6,
+		type: 'tv'
 	},
 	{
 		id: 7,
 		name: 'You',
 		year: 2018,
-		img: card13
+		img: card13,
+		type: 'tv'
 	},
 	{
 		id: 8,
 		name: 'Castlevania',
 		year: 2017,
-		img: card14
+		img: card14,
+		type: 'tv'
 	},
 	{
 		id: 9,
 		name: 'The OA',
 		year: 2015,
-		img: card15
+		img: card15,
+		type: 'tv'
 	},
 	{
 		id: 10,
 		name: 'Locke & Key',
 		year: 2020,
-		img: card16
+		img: card16,
+		type: 'tv'
 	},
 	{
 		id: 11,
 		name: 'Reply 1988',
 		year: 2015,
-		img: card17
+		img: card17,
+		type: 'tv'
 	},
 	{
 		id: 12,
 		name: 'Panji Manusia Millenium',
 		year: 1999,
-		img: card18
-	}
-];
-
-export const Movies = [
+		img: card18,
+		type: 'tv'
+	},
 	{
-		id: 1,
+		id: 13,
 		name: 'The GodFather',
 		year: 2019,
-		img: card7
+		img: card7,
+		type: 'movies'
 	},
 	{
-		id: 2,
+		id: 14,
 		name: 'The Dark Knight',
 		year: 2017,
-		img: card8
+		img: card8,
+		type: 'movies'
 	},
 	{
-		id: 3,
+		id: 15,
 		name: 'Avengers : Endgame',
 		year: 2015,
-		img: card9
+		img: card9,
+		type: 'movies'
 	},
 	{
-		id: 4,
+		id: 16,
 		name: 'Joker',
 		year: 2012,
-		img: card10
+		img: card10,
+		type: 'movies'
 	},
 	{
-		id: 5,
+		id: 17,
 		name: 'Gisaengchung',
 		year: 2013,
-		img: card11
+		img: card11,
+		type: 'movies'
 	},
 	{
-		id: 6,
+		id: 18,
 		name: 'Chernobly',
 		year: 2018,
-		img: card12
+		img: card12,
+		type: 'movies'
 	},
 	{
-		id: 7,
+		id: 19,
 		name: 'Serigala Terakhir',
 		year: 2019,
-		img: card19
+		img: card19,
+		type: 'movies'
 	},
 	{
-		id: 8,
+		id: 20,
 		name: 'Grave of the Fireflies',
 		year: 1988,
-		img: card20
+		img: card20,
+		type: 'movies'
 	},
 	{
-		id: 9,
+		id: 21,
 		name: 'My Neighbor Totoro',
 		year: 1988,
-		img: card21
+		img: card21,
+		type: 'movies'
 	},
 	{
-		id: 10,
+		id: 22,
 		name: 'A Quiet Place: Part II',
 		year: 2020,
-		img: card22
+		img: card22,
+		type: 'movies'
 	},
 	{
-		id: 11,
+		id: 23,
 		name: 'Frozen 2',
 		year: 2019,
-		img: card23
+		img: card23,
+		type: 'movies'
 	},
 	{
-		id: 12,
+		id: 24,
 		name: 'Suicide Squad',
 		year: 2016,
-		img: card24
+		img: card24,
+		type: 'movies'
 	}
 ];
