@@ -9,6 +9,7 @@ import Home from './pages/Home';
 import TVSection from './pages/TVSection';
 import MoviesSection from './pages/MoviesSection';
 import DetailMovie from './pages/DetailMovie';
+import Profile from './pages/Profile';
 
 import ScrollToTop from './components/utils/ScrollToTop';
 
@@ -46,6 +47,7 @@ function App() {
 						<Route exact path="/tv-series" component={TVSection} />
 						<Route exact path="/movies" component={MoviesSection} />
 						<Route exact path="/detail/:id" component={DetailMovie} />
+						<Route exact path="/profile" component={Profile} />
 					</Switch>
 				</ScrollToTop>
 

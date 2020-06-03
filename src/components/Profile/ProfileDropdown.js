@@ -2,14 +2,24 @@ import React from 'react';
 import './Profile.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faMoneyCheck, faPowerOff } from '@fortawesome/free-solid-svg-icons';
+import { useHistory } from 'react-router-dom';
 
 const ProfileDropdown = ({ showProfileDropdown }) => {
+	let history = useHistory();
+
+	const openProfile = () => {
+		history.push(`/profile`);
+		showProfileDropdown();
+	};
+
 	return (
 		<div>
 			<div className="profile-square">
 				<p>
 					<FontAwesomeIcon icon={faUser} className="icon" />{' '}
-					<span className="submenu">Profile</span>
+					<span className="submenu" onClick={() => openProfile()}>
+						Profile
+					</span>
 				</p>
 				<p>
 					<FontAwesomeIcon icon={faMoneyCheck} className="icon" />{' '}
