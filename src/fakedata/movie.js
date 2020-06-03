@@ -45,7 +45,8 @@ export const movieList = [
 		id: 3,
 		name: 'Game Of Thrones',
 		year: 2015,
-		img: card3
+		img: card3,
+		type: 'tv'
 	},
 	{
 		id: 4,
