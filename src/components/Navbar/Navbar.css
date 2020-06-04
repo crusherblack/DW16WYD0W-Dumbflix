@@ -48,7 +48,7 @@ a {
 		position: absolute;
 		right: 27px;
 		display: block;
-		top: 12%;
+		margin-top: 12px;
 	}
 
 	.profile img {
@@ -85,7 +85,7 @@ a {
 	border-radius: 5px;
 	color: #e50914;
 	cursor: pointer;
-	top: 17px;
+	margin-top: 4px;
 	display: inline-block;
 	margin-right: 15px;
 }
@@ -105,7 +105,7 @@ a {
 	border-radius: 5px;
 	color: #ffffff;
 	cursor: pointer;
-	top: 17px;
+	margin-top: 4px;
 	display: inline-block;
 }
 
