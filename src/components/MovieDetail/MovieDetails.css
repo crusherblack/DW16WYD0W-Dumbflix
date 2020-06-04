@@ -33,6 +33,18 @@
 		flex-direction: column;
 		width: 100%;
 	}
+
+	.play-now {
+		width: 100%;
+	}
+
+	.description-container {
+		width: 100%;
+	}
+
+	.episode-container {
+		width: 100%;
+	}
 }
 
 .movie-description {
@@ -60,12 +72,6 @@
 	overflow: hidden;
 	width: 500px;
 	position: relative;
-}
-
-@media (max-width: 768px) {
-	.play-now {
-		width: 100%;
-	}
 }
 
 .description {
