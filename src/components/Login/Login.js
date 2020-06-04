@@ -47,7 +47,7 @@ const Login = ({ showModalLogin, handleLogin, error }) => {
             </div>
             <div className="form-group">
               <input
-                type="text"
+                type="password"
                 className="custom-input"
                 placeholder="Password"
                 value={password}
