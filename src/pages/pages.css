@@ -126,3 +126,10 @@
 .form-payment {
 	padding: 0 25%;
 }
+
+@media (max-width: 758px) {
+	.payment-details {
+		width: 100%;
+		padding: 0 0;
+	}
+}
