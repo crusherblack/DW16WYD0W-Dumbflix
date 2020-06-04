@@ -31,3 +31,18 @@
 .submenu:hover {
 	color: rgb(195, 195, 195);
 }
+
+.profile-dropdown-group {
+	display: flex;
+	margin-bottom: 18px;
+}
+
+.profile-dropdown-icon {
+	font-size: 19px;
+	width: 15px;
+}
+
+.profile-dropdown-link {
+	font-size: 19px;
+	padding-left: 30px;
+}

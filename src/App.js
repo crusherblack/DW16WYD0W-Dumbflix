@@ -15,7 +15,7 @@ import Payment from './pages/Payment';
 import ScrollToTop from './components/utils/ScrollToTop';
 
 function App() {
-	const [ isLogin, setLogin ] = useState(false);
+	const [ isLogin, setLogin ] = useState(true);
 	const [ modalLogin, setModalLogin ] = useState(false);
 	const [ modalRegister, setModalRegister ] = useState(false);
 

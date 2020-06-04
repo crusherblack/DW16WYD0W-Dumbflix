@@ -20,23 +20,37 @@ const ProfileDropdown = ({ showProfileDropdown }) => {
 	return (
 		<div>
 			<div className="profile-square">
-				<p>
-					<FontAwesomeIcon icon={faUser} className="icon" />{' '}
-					<span className="submenu" onClick={() => openProfile()}>
-						Profile
-					</span>
-				</p>
-				<p>
-					<FontAwesomeIcon icon={faMoneyCheck} className="icon" />{' '}
-					<span className="submenu" onClick={() => openPayment()}>
-						Pay
-					</span>
-				</p>
-				<hr />
-				<p>
-					<FontAwesomeIcon icon={faPowerOff} className="icon" />{' '}
-					<span className="submenu">Log Out</span>
-				</p>
+				<div className="profile-dropdown-group">
+					<div className="profile-dropdown-icon">
+						<FontAwesomeIcon icon={faUser} className="icon" />
+					</div>
+					<div className="profile-dropdown-link">
+						<span className="submenu" onClick={() => openProfile()}>
+							Profile
+						</span>
+					</div>
+				</div>
+
+				<div className="profile-dropdown-group">
+					<div className="profile-dropdown-icon">
+						<FontAwesomeIcon icon={faMoneyCheck} className="icon" />
+					</div>
+					<div className="profile-dropdown-link">
+						<span className="submenu" onClick={() => openPayment()}>
+							Pay
+						</span>
+					</div>
+				</div>
+
+				<hr style={{ marginBottom: '18px' }} />
+				<div className="profile-dropdown-group">
+					<div className="profile-dropdown-icon">
+						<FontAwesomeIcon icon={faPowerOff} className="icon" />
+					</div>
+					<div className="profile-dropdown-link">
+						<span className="submenu">LogOut</span>
+					</div>
+				</div>
 			</div>
 		</div>
 	);
