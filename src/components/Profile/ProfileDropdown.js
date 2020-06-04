@@ -1,59 +1,79 @@
-import React from 'react';
-import './Profile.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faMoneyCheck, faPowerOff } from '@fortawesome/free-solid-svg-icons';
-import { useHistory } from 'react-router-dom';
+import React from "react";
+import "./Profile.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faUser,
+  faMoneyCheck,
+  faPowerOff,
+} from "@fortawesome/free-solid-svg-icons";
+import { useHistory } from "react-router-dom";
 
 const ProfileDropdown = ({ showProfileDropdown }) => {
-	let history = useHistory();
+  let history = useHistory();
 
-	const openProfile = () => {
-		history.push(`/profile`);
-		showProfileDropdown();
-	};
+  const openProfile = () => {
+    history.push(`/profile`);
+    showProfileDropdown();
+  };
 
-	const openPayment = () => {
-		history.push(`/payment`);
-		showProfileDropdown();
-	};
+  const openPayment = () => {
+    history.push(`/payment`);
+    showProfileDropdown();
+  };
 
-	return (
-		<div>
-			<div className="profile-square">
-				<div className="profile-dropdown-group">
-					<div className="profile-dropdown-icon">
-						<FontAwesomeIcon icon={faUser} className="icon" />
-					</div>
-					<div className="profile-dropdown-link">
-						<span className="submenu" onClick={() => openProfile()}>
-							Profile
-						</span>
-					</div>
-				</div>
+  const openTranscation = () => {
+    history.push(`/transaction`);
+    showProfileDropdown();
+  };
 
-				<div className="profile-dropdown-group">
-					<div className="profile-dropdown-icon">
-						<FontAwesomeIcon icon={faMoneyCheck} className="icon" />
-					</div>
-					<div className="profile-dropdown-link">
-						<span className="submenu" onClick={() => openPayment()}>
-							Pay
-						</span>
-					</div>
-				</div>
+  return (
+    <div>
+      <div className="profile-square">
+        <div className="profile-dropdown-group">
+          <div className="profile-dropdown-icon">
+            <FontAwesomeIcon icon={faUser} className="icon" />
+          </div>
+          <div className="profile-dropdown-link">
+            <span className="submenu" onClick={() => openProfile()}>
+              Profile
+            </span>
+          </div>
+        </div>
 
-				<hr style={{ marginBottom: '18px' }} />
-				<div className="profile-dropdown-group">
-					<div className="profile-dropdown-icon">
-						<FontAwesomeIcon icon={faPowerOff} className="icon" />
-					</div>
-					<div className="profile-dropdown-link">
-						<span className="submenu">LogOut</span>
-					</div>
-				</div>
-			</div>
-		</div>
-	);
+        <div className="profile-dropdown-group">
+          <div className="profile-dropdown-icon">
+            <FontAwesomeIcon icon={faMoneyCheck} className="icon" />
+          </div>
+          <div className="profile-dropdown-link">
+            <span className="submenu" onClick={() => openPayment()}>
+              Pay
+            </span>
+          </div>
+        </div>
+
+        <div className="profile-dropdown-group">
+          <div className="profile-dropdown-icon">
+            <FontAwesomeIcon icon={faMoneyCheck} className="icon" />
+          </div>
+          <div className="profile-dropdown-link">
+            <span className="submenu" onClick={() => openTranscation()}>
+              Transcation
+            </span>
+          </div>
+        </div>
+
+        <hr style={{ marginBottom: "18px" }} />
+        <div className="profile-dropdown-group">
+          <div className="profile-dropdown-icon">
+            <FontAwesomeIcon icon={faPowerOff} className="icon" />
+          </div>
+          <div className="profile-dropdown-link">
+            <span className="submenu">LogOut</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default ProfileDropdown;

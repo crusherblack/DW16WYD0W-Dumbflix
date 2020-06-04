@@ -1,8 +1,62 @@
-import React from 'react';
-import './css/Transcation.css';
+import React from "react";
+import "./css/Transcation.css";
+import { transaction } from "../fakedata/transcation";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 const IncomingTransaction = () => {
-	return <div>awdad</div>;
+  const data = transaction.map((data, index) => (
+    <tr key={data.id}>
+      <td>{index + 1}</td>
+      <td>{data.user}</td>
+      <td>{data.bukti}</td>
+      <td>{data.remaining} Hari</td>
+      <td
+        style={{
+          color: data.status == "active" ? "#0ACF83" : "#FF0742",
+        }}
+      >
+        {data.status}
+      </td>
+      <td
+        style={{
+          color:
+            data.status_payment == "approve"
+              ? "#0ACF83"
+              : data.status_payment == "pending"
+              ? "#F7941E"
+              : "#FF0742",
+        }}
+      >
+        {data.status_payment}
+      </td>
+      <td>
+        <span style={{ fontSize: "20px", cursor: "pointer", color: "#1C9CD2" }}>
+          <FontAwesomeIcon icon={faCaretDown} />
+        </span>
+      </td>
+    </tr>
+  ));
+
+  return (
+    <div className="transcation-container">
+      <h1>Incoming Transcation</h1>
+      <table class="transcation-table">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Users</th>
+            <th>Bukti Transfer</th>
+            <th>Remaining Aktif</th>
+            <th>Status User</th>
+            <th>Status Payment</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>{data}</tbody>
+      </table>
+    </div>
+  );
 };
 
 export default IncomingTransaction;
