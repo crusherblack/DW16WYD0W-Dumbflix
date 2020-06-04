@@ -94,3 +94,35 @@
 	background: #8b040b;
 	border: 1px solid #8b040b;
 }
+
+.payment-container {
+	display: flex;
+	margin-top: 130px;
+	color: white;
+}
+
+.payment-details {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40%;
+	padding: 0 30%;
+}
+
+.payment-desc {
+	text-align: center;
+	display: inline-block;
+}
+
+.payment-desc p {
+	font-size: 20px;
+}
+
+.red {
+	color: #e50914;
+	font-weight: bold;
+}
+
+.form-payment {
+	padding: 0 25%;
+}

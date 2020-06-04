@@ -12,6 +12,11 @@ const ProfileDropdown = ({ showProfileDropdown }) => {
 		showProfileDropdown();
 	};
 
+	const openPayment = () => {
+		history.push(`/payment`);
+		showProfileDropdown();
+	};
+
 	return (
 		<div>
 			<div className="profile-square">
@@ -23,7 +28,9 @@ const ProfileDropdown = ({ showProfileDropdown }) => {
 				</p>
 				<p>
 					<FontAwesomeIcon icon={faMoneyCheck} className="icon" />{' '}
-					<span className="submenu">Pay</span>
+					<span className="submenu" onClick={() => openPayment()}>
+						Pay
+					</span>
 				</p>
 				<hr />
 				<p>
