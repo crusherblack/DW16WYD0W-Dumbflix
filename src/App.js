@@ -16,7 +16,7 @@ import Transaction from "./pages/IncomingTransaction";
 import ScrollToTop from "./components/utils/ScrollToTop";
 
 function App() {
-  const [isLogin, setLogin] = useState(false);
+  const [isLogin, setLogin] = useState(true);
 
   const [user, setuUser] = useState({
     id: "",

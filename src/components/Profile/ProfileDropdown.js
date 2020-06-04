@@ -29,6 +29,7 @@ const ProfileDropdown = ({ showProfileDropdown }) => {
   return (
     <div>
       <div className="profile-square">
+        <div class="profile-arrow"></div>
         <div className="profile-dropdown-group">
           <div className="profile-dropdown-icon">
             <FontAwesomeIcon icon={faUser} className="icon" />
