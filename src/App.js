@@ -16,8 +16,17 @@ import ScrollToTop from './components/utils/ScrollToTop';
 
 function App() {
 	const [ isLogin, setLogin ] = useState(false);
+
+	const [ user, setuUser ] = useState({
+		id: '',
+		name: '',
+		email: '',
+		role: ''
+	});
+
 	const [ modalLogin, setModalLogin ] = useState(false);
 	const [ modalRegister, setModalRegister ] = useState(false);
+	const [ error, setError ] = useState('');
 
 	const showModalLogin = () => {
 		setModalLogin(!modalLogin);
@@ -29,9 +38,35 @@ function App() {
 		setModalLogin(false);
 	};
 
-	const handleLogin = () => {
-		setLogin(true);
-		setModalLogin(false);
+	const userLogin = [
+		{
+			id: 1,
+			name: 'Fadhil Darma Putera Z',
+			email: 'fadhildarma13@gmail.com',
+			password: 'admin',
+			role: 'admin'
+		},
+		{
+			id: 2,
+			name: 'User Biasa',
+			email: 'user@gmail.com',
+			password: 'user',
+			role: 'user'
+		}
+	];
+
+	const handleLogin = (payload) => {
+		const isValid = userLogin.filter(
+			(user) => user.email == payload.email && user.password == payload.password
+		);
+
+		if (isValid.length) {
+			setLogin(true);
+			setModalLogin(false);
+		} else {
+			setError('invalid email and password');
+			console.log('invalid email and password');
+		}
 	};
 
 	return (
@@ -57,6 +92,7 @@ function App() {
 					<ModalLogin
 						showModalLogin={showModalLogin}
 						handleLogin={handleLogin}
+						error={error}
 					/>
 				)}
 				{modalRegister && <ModalRegister showModalRegister={showModalRegister} />}

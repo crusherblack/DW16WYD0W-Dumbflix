@@ -1,7 +1,18 @@
 import React, { useState } from 'react';
 import './Login.css';
 
-const Login = ({ showModalLogin, handleLogin }) => {
+const Login = ({ showModalLogin, handleLogin, error }) => {
+	const [ formData, setFormData ] = useState({
+		email: '',
+		password: ''
+	});
+
+	const { email, password } = formData;
+
+	const onChange = (e) => {
+		setFormData({ ...formData, [e.target.name]: e.target.value });
+	};
+
 	return (
 		<div>
 			<div className="modal">
@@ -10,18 +21,29 @@ const Login = ({ showModalLogin, handleLogin }) => {
 						X
 					</span>
 					<h1 style={{ marginBottom: '40px' }}>LOGIN</h1>
+					{error && 'Invalid Email or Password'}
 					<div className="form-group">
-						<input type="text" className="custom-input" placeholder="Email" />
+						<input
+							type="text"
+							className="custom-input"
+							placeholder="Email"
+							value={email}
+							name="email"
+							onChange={(e) => onChange(e)}
+						/>
 					</div>
 					<div className="form-group">
 						<input
 							type="text"
 							className="custom-input"
 							placeholder="Password"
+							value={password}
+							name="password"
+							onChange={(e) => onChange(e)}
 						/>
 					</div>
 					<div className="form-group" style={{ marginTop: '50px' }}>
-						<button className="button" onClick={() => handleLogin()}>
+						<button className="button" onClick={() => handleLogin(formData)}>
 							Login
 						</button>
 					</div>

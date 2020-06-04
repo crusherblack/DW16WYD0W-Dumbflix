@@ -1,5 +1,5 @@
 import React from 'react';
-import './pages.css';
+import './css/Profile.css';
 import avatar from '../img/profile/avatar.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

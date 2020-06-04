@@ -4,7 +4,7 @@ import VideoThumbnail from '../components/VideoThumbnail/VideoThumbnail';
 import Description from '../components/MovieDetail/Description';
 import Episode from '../components/MovieDetail/Episode';
 import Movie from '../components/MovieDetail/Movie';
-import './pages.css';
+import './css/DetailMovie.css';
 
 import moviesThumbnail from '../img/videothumbnail/video2.png';
 import tvThumbnail from '../img/videothumbnail/video1.png';

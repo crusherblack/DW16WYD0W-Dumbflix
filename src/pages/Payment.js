@@ -1,5 +1,5 @@
 import React from 'react';
-import './pages.css';
+import './css/Payment.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperclip } from '@fortawesome/free-solid-svg-icons';
 
