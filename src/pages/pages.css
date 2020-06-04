@@ -31,24 +31,50 @@
 	justify-content: center;
 }
 
+@media (max-width: 768px) {
+	.profile-card {
+		flex-direction: column;
+	}
+}
+
 .profile-desc {
-	width: 70%;
-	min-height: 50vh;
+	display: block;
+	min-width: 70%;
 	max-width: 100%;
-	border: 1px solid white;
+	min-height: 50vh;
+}
+
+.profile-data {
+	display: flex;
+	padding-left: 30px;
+	margin-bottom: 18px;
+}
+
+.profile-details {
+	padding-left: 10px;
+}
+
+.profile-details span {
+	display: block;
+}
+
+.profile-icon {
+	color: #e50914;
+	font-size: 35px;
+	width: 45px;
 }
 
 .profile-img {
-	width: 30%;
+	min-width: 30%;
 	max-width: 100%;
 	min-height: 50vh;
-	border: 1px solid white;
 }
 
 .profile-avatar {
 	padding-top: 20px;
 	position: relative;
 	float: right;
+	max-width: 100%;
 }
 
 .profile-button {
