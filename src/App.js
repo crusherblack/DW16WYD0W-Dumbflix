@@ -20,7 +20,7 @@ import NotFound from "./components/404/NotFound";
 import ScrollToTop from "./components/utils/ScrollToTop";
 
 function App() {
-  const [isLogin, setLogin] = useState(true);
+  const [isLogin, setLogin] = useState(false);
 
   const [user, setuUser] = useState({
     id: "",
