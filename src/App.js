@@ -43,6 +43,10 @@ function App() {
     setModalLogin(false);
   };
 
+  const handleLogout = () => {
+    setLogin(false);
+  };
+
   const userLogin = [
     {
       id: 1,
@@ -81,6 +85,7 @@ function App() {
           isLogin={isLogin}
           showModalLogin={showModalLogin}
           showModalRegister={showModalRegister}
+          handleLogout={handleLogout}
         />
         <ScrollToTop>
           <Switch>

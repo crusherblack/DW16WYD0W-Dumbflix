@@ -10,7 +10,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useHistory } from "react-router-dom";
 
-const ProfileDropdown = ({ showProfileDropdown }) => {
+const ProfileDropdown = ({ showProfileDropdown, handleLogout }) => {
   let history = useHistory();
 
   const openProfile = () => {
@@ -30,6 +30,11 @@ const ProfileDropdown = ({ showProfileDropdown }) => {
 
   const openListMovie = () => {
     history.push(`/movie-list`);
+    showProfileDropdown();
+  };
+
+  const setLogout = () => {
+    handleLogout();
     showProfileDropdown();
   };
 
@@ -87,7 +92,9 @@ const ProfileDropdown = ({ showProfileDropdown }) => {
             <FontAwesomeIcon icon={faPowerOff} className="icon" />
           </div>
           <div className="profile-dropdown-link">
-            <span className="submenu">LogOut</span>
+            <span className="submenu" onClick={() => setLogout()}>
+              LogOut
+            </span>
           </div>
         </div>
       </div>
