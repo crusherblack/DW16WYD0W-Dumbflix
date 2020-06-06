@@ -13,6 +13,7 @@ import tvThumbnail from '../img/videothumbnail/video1.png';
 
 const DetailMovie = ({ match }) => {
 	let history = useHistory();
+	let role = 'admin';
 	const movie = movieList.filter((detail) => {
 		return detail.id == match.params.id;
 	});
@@ -26,26 +27,28 @@ const DetailMovie = ({ match }) => {
 			<VideoThumbnail
 				thumbnail={movie[0].type == 'tv' ? tvThumbnail : moviesThumbnail}
 			/>
-			<div
-				style={{
-					height: '20px',
-					position: 'relative'
-				}}
-			>
-				<button
-					className="btn-merah"
+			{role == 'admin' ? (
+				<div
 					style={{
-						float: 'right',
-						width: '12em',
-						top: '1em',
-						right: '2em',
-						marginBottom: '3em'
+						height: '20px',
+						position: 'relative'
 					}}
-					onClick={() => openAddEpisode()}
 				>
-					Add Episode
-				</button>
-			</div>
+					<button
+						className="btn-merah"
+						style={{
+							float: 'right',
+							width: '12em',
+							top: '1em',
+							right: '2em',
+							marginBottom: '3em'
+						}}
+						onClick={() => openAddEpisode()}
+					>
+						Add Episode
+					</button>
+				</div>
+			) : null}
 
 			<div className="details">
 				<Description movie={movie[0]} />
