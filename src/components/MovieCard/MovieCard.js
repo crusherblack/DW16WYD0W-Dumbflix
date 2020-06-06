@@ -11,6 +11,7 @@ const MovieCard = ({ movie: { id, name, year, img } }) => {
 				className="card"
 				src={img}
 				onClick={() => history.push(`/detail/${id}`)}
+				style={{ height: '20em' }}
 			/>
 			<span className="movie-title">{name}</span>
 			<span className="movie-year">{year}</span>

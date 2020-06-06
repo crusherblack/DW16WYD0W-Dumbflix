@@ -12,7 +12,9 @@ import DetailMovie from './pages/DetailMovie';
 import Profile from './pages/Profile';
 import Payment from './pages/Payment';
 import Transaction from './pages/IncomingTransaction';
-import ListMovie from './pages/ListMovie';
+import ListMovie from './pages/Movie/ListMovie';
+import AddMovie from './pages/Movie/AddMovie';
+import AddEpisode from './pages/Episode';
 
 import PrivateRoute from './components/Routing/PrivateRoute';
 import NotFound from './components/404/NotFound';
@@ -20,7 +22,7 @@ import NotFound from './components/404/NotFound';
 import ScrollToTop from './components/utils/ScrollToTop';
 
 function App() {
-	const [ isLogin, setLogin ] = useState(false);
+	const [ isLogin, setLogin ] = useState(true);
 
 	const [ user, setuUser ] = useState({
 		id: '',
@@ -115,6 +117,18 @@ function App() {
 							exact
 							path="/movie-list"
 							component={ListMovie}
+							isLogin={isLogin}
+						/>
+						<PrivateRoute
+							exact
+							path="/add-movie"
+							component={AddMovie}
+							isLogin={isLogin}
+						/>
+						<PrivateRoute
+							exact
+							path="/add-episode"
+							component={AddEpisode}
 							isLogin={isLogin}
 						/>
 						<Route component={NotFound} />

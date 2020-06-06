@@ -39,7 +39,7 @@ const Payment = () => {
 									padding: '0 10px'
 								}}
 							>
-								Attache proof of transfer{' '}
+								Attach proof of transfer{' '}
 								<div
 									style={{
 										float: 'right',
