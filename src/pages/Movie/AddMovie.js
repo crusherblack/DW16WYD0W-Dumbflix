@@ -46,7 +46,7 @@ const AddMovie = () => {
 					</div>
 				</div>
 				<div className="form-group">
-					<input type="text" className="custom-input" placeholder="Year" />
+					<input type="date" className="custom-input" placeholder="Year" />
 				</div>
 				<div className="form-group">
 					<select name="" id="" className="custom-select">
