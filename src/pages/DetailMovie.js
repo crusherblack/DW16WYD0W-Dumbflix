@@ -27,7 +27,7 @@ const DetailMovie = ({ match }) => {
 			<VideoThumbnail
 				thumbnail={movie[0].type == 'tv' ? tvThumbnail : moviesThumbnail}
 			/>
-			{role == 'admin' ? (
+			{role == 'admin' && movie[0].type == 'tv' ? (
 				<div
 					style={{
 						height: '20px',

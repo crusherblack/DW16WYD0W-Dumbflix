@@ -59,6 +59,7 @@ const AddMovie = () => {
 					<textarea type="text" className="custom-textarea" />
 				</div>
 				<AddEpisode />
+
 				<div className="form-group">
 					<button
 						className="btn-merah"

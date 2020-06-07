@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperclip, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { styles } from './Styles';
 
 const AddEpisode = () => {
 	const [ rates, setRates ] = React.useState([
@@ -22,75 +23,69 @@ const AddEpisode = () => {
 	};
 
 	return (
-		<div
-			style={{
-				marginTop: '3em'
-			}}
-		>
-			<div className="satuline">
-				<form onSubmit={handleSubmit} onChange={handleChange}>
-					{rates.map((row, index) => {
-						const titleEpisodeId = `title-${index}`,
-							attachThumbnailId = `attach-${index}`,
-							linkFilmId = `link-${index}`;
-						return (
-							<div key={index}>
-								<div className="form-group">
-									<label>{`Range #${index + 1}`}</label>
+		<div>
+			<form onSubmit={handleSubmit} onChange={handleChange}>
+				{rates.map((row, index) => {
+					const titleEpisodeId = `title-${index}`,
+						attachThumbnailId = `attach-${index}`,
+						linkFilmId = `link-${index}`;
+					return (
+						<div key={index} style={{ marginTop: '3rem' }}>
+							<div className="form-group">
+								<div
+									style={{
+										display: 'grid',
+										gridTemplateColumns: 'repeat(2, 1fr)',
+										gridGap: '1rem'
+									}}
+								>
 									<input
 										type="text"
 										name={titleEpisodeId}
 										data-id={index}
 										id={titleEpisodeId}
 										className="titleEpisode"
-										placeholder="Title-Episode"
-										style={{
-											width: '160%'
-										}}
+										placeholder="Title Episode"
+										style={styles.customInputTitle}
 									/>
-
-									<label>Rate</label>
 									<input
 										type="file"
 										name={attachThumbnailId}
 										data-id={index}
 										id={attachThumbnailId}
 										className="attachThumbnail"
-										style={{
-											width: '40%'
-										}}
+										style={styles.customInputFile}
 									/>
-								</div>
-								<div className="form-group">
-									<label>Rate</label>
-									<input
-										type="text"
-										name={linkFilmId}
-										data-id={index}
-										id={linkFilmId}
-										className="linkFilm"
-									/>
-								</div>
-								<div className="form-group">
-									<button
-										className="btn-grey"
-										style={{
-											width: '100%',
-											height: '50px',
-											color: '#e50914'
-										}}
-										onClick={addRate}
-									>
-										<FontAwesomeIcon icon={faPlus} />
-									</button>
 								</div>
 							</div>
-						);
-					})}
-
-					<input type="submit" value="Submit" />
-				</form>
-			</div>
+							<div className="form-group">
+								<input
+									type="text"
+									name={linkFilmId}
+									data-id={index}
+									id={linkFilmId}
+									className="linkFilm"
+									placeholder="Lik Film"
+									style={styles.customInput}
+								/>
+							</div>
+						</div>
+					);
+				})}
+				<div className="form-group">
+					<button
+						className="btn-grey"
+						style={{
+							width: '100%',
+							height: '50px',
+							color: '#e50914'
+						}}
+						onClick={addRate}
+					>
+						<FontAwesomeIcon icon={faPlus} />
+					</button>
+				</div>
+			</form>
 		</div>
 	);
 };
